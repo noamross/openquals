@@ -14,7 +14,7 @@ Overall Questions
     species?
 
 # Study System - Sudden Oak Death in Redwood/Tanoak/Bay Forests
-
+ 
 
 -   Caused by water mold *Phytophthora ramorum* [@Rizzo2002b]
 -   Spreads via wind-blown raid and fog, as well as human vectors (short- and
