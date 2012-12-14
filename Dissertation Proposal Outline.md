@@ -103,7 +103,7 @@ Essential topics and papers related to disease modeling
 -   SIR Models: @Kermack1927, @Kermack1932, @Kermack1933, @Anderson1991
 -   Host heterogeneity: @Anderson1985
 -   Multispecies transmission: @Dobson2004, @Craft2008
--   Age-structured models: @Metcalf2011, @Klepac2009
+-   Age-structured models: , @Klepac2009
 -   Plant-specific spatial models: @Ferrari2006, @Bolker2009, @Gilligan2008
 -   Stochastic spatial spread: @Lewis2000
 -   Kernels for spatial spread on a discrete grid: @Chesson2005
