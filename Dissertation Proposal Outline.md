@@ -167,6 +167,8 @@ Optimization
 
  - An alternative useful formulation of the problem is to determine the minimum-cost method given constraints of desired tree population and *maximum acceptable probability of outbreak*.  An advantage of this approach is to provide managers with an method of implicit valuation of the tanoak population by illustrating the trade-off between costs and acceptable tree populations and risks.
 
+ - Examine under a variety of regulatory constraints:  limiting herbicide use for suppressing sprounts and others, harvest regulations in riparian areas, endangered species limitation on time/space of cutting.
+
  - An extension of the analysis above will include the parameter uncertainty of the best-fit model, and an optimization under the scenario that parameter uncertainties decrease with time
 
 Topics and papers relevant to optimization

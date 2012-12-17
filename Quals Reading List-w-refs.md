@@ -2,10 +2,45 @@
 % Noam Ross
 % 12-12-13 15:08:20
 
-Forest Biology
-==============
+Forest Landscape Pathology
+==========================
 
 Examiner: [David Rizzo]
+
+Landscape-level disease management
+----------------------------------
+
+-   Holdenrieder et al. (2004)
+-   Meentemeyer et al. (2012)
+-   Gilbert and Hubbell (1996)
+-   Hansen and Goheen (2000)
+-   Holt et al. (2003)
+
+Case studies from Tainter and Baker (1996):
+
+-   Root system decay
+-   Needle Blight
+-   White pine blister and fusifirm rust
+-   Dwarf mistletoe
+
+Plus insects:
+
+-   Gypsy Moth
+-   Bark beetles
+
+Appraoches:
+
+-   Breeding for resistance
+-   Slow the spread
+-   Eradication
+-   Silvicultural treatments
+
+Sudden Oak Death
+----------------
+
+-   Biology: Grünwald et al. (2012)
+-   Swiekei (*in press*)
+-   Rizzo et al. (2005)
 
 Model Construction and Theory
 =============================
@@ -26,7 +61,7 @@ model, and how to as well as
 SIR epidemiological models
 --------------------------
 
-Basic theory, the importance of R\_0 and its interpretation and derivation in
+Basic theory, the importance of $R_0$ and its interpretation and derivation in
 increasingly complex model structures
 
 -   Kermack and Mckendrick (1927)
@@ -55,7 +90,10 @@ animal systems?
 -   Moore et al. (2011)
 -   Seabloom et al. (2009)
 -   Borer et al. (2007)
--   Gilligan and van den Bosch (2008)
+-   @Gilligan, C. A., and F. van den Bosch. 2008. Epidemiological models for
+    invasion and persistence of pathogens.. Annual review of phytopathology
+    46:385–418.
+
 -   Bolker et al. (2009)
 -   Ferrari et al. (2006)
 
@@ -67,7 +105,7 @@ Examiner: [Andrew Latimer]
 Fitting time-series data with iterative filtering
 -------------------------------------------------
 
-How to estimate likelihood and maximum-likelihood paramaters for dynamic
+How to estimate likelihood and maximum-likelihood parameters for dynamic
 ecological models, using multivariate time-series data?
 
 -   Gimenez et al. (2012)
@@ -172,12 +210,20 @@ Ferrari, M. J., O. N. Bjø rnstad, J. L. Partain, and J. Antonovics. 2006. A
 Gravity Model for the Spread of a Pollinator-Borne Plant Pathogen. The American
 Naturalist 168.
 
-Gilligan, C. A., and F. van den Bosch. 2008. Epidemiological models for invasion
-and persistence of pathogens.. Annual review of phytopathology 46:385–418.
+Gilbert, G. S., and S. P. Hubbell. 1996. Diseases and the Tropical of
+Conservation Forests. BioScience 46:98–106.
 
 Gimenez, O., J. D. Lebreton, J. M. Gaillard, R. Choquet, and R. Pradel. 2012.
 Estimating demographic parameters using hidden process dynamic models.
 Theoretical Population Biology 82:307–316.
+
+Grünwald, N. J., M. Garbelotto, E. M. Goss, K. Heungens, and S. Prospero. 2012.
+Emergence of the sudden oak death pathogen Phytophthora ramorum. Trends in
+microbiology 20:131–8.
+
+Hansen, E. M., and E. M. Goheen. 2000. Phellinus Weirii and other Native Root
+Pathogens as Determinants of Forest Structure and Process in Western North
+America. Annual review of phytopathology 38:515–539.
 
 Hartman, R. 1976. The Harvesting Decision when a Standing Forest has Value.
 Economic Inquiry 14:52–58.
@@ -185,6 +231,13 @@ Economic Inquiry 14:52–58.
 He, D., E. L. Ionides, and A. a King. 2010. Plug-and-play inference for disease
 dynamics: measles in large and small populations as a case study. Journal of the
 Royal Society, Interface / the Royal Society 7:271–83.
+
+Holdenrieder, O., M. Pautasso, P. J. Weisberg, and D. Lonsdale. 2004. Tree
+diseases and landscape processes: the challenge of landscape pathology.. Trends
+in ecology & evolution (Personal edition) 19:446–52.
+
+Holt, R. D., A. P. Dobson, M. Begon, R. G. Bowers, and E. M. Schauber. 2003.
+Parasite establishment in host communities. Ecology Letters 6:837–842.
 
 Ionides, E. L., C. Bretó, and a a King. 2006. Inference for nonlinear dynamical
 systems. Proceedings of the National Academy of Sciences of the United States of
@@ -213,6 +266,10 @@ Levins, R. 1966. The Strategy of Model Building in Population Biology
 May, R. M. 2004. Uses and abuses of mathematics in biology.. Science (New York,
 N.Y.) 303:790–3.
 
+Meentemeyer, R. K., S. E. Haas, and T. Václavík. 2012. Landscape epidemiology of
+emerging infectious diseases in natural and human-altered ecosystems. Annual
+review of phytopathology 50:379–402.
+
 Metcalf, C. J. E., J. Lessler, P. Klepac, A. Morice, B. T. Grenfell, and O. N.
 Bjø rnstad. 2012. Structured models of infectious disease: Inference with
 discrete data. Theoretical population biology 82:275–282.
@@ -228,6 +285,10 @@ forest. Journal of Environmental Economics and Management 11:180–190.
 Reed, W. J. 1986. Optimal harvesting models in forest management - A survey.
 Natural Resource Modeling.
 
+Rizzo, D. M., M. Garbelotto, and E. M. Hansen. 2005. Phytophthora ramorum:
+integrative research and management of an emerging pathogen in California and
+Oregon forests. Annual review of phytopathology 43:309–35.
+
 Seabloom, E. W., P. R. Hosseini, A. G. Power, and E. T. Borer. 2009. Diversity
 and composition of viral communities: coinfection of barley and cereal yellow
 dwarf viruses in California grasslands.. The American naturalist 173:79.
@@ -241,6 +302,9 @@ shifting social preferences for ecosystem services.
 
 Tahvonen, O. 2004. Optimal Harvesting of Forest Age Classes: A Survey of Some
 Recent Results. Mathematical Population Studies 11:205–232.
+
+Tainter, F. H., and F. A. Baker. 1996. Principles of Forest Pathology. . John
+Wiley & Sons.
 
 Tuljapurkar, S., T. Coulson, and U. K. Steiner. 2012. Structured population
 models: Introduction. Theoretical population biology 82:241–3.
