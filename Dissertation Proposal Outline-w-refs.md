@@ -13,6 +13,30 @@ Overall Questions
 -   What is the most cost-effective strategy for maintaining populations of tree
     species?
 
+Context: Landscape management of disease
+========================================
+
+-   Forest diseases and pests have the potential to cause damage
+-   Diseases in forests are multi-host. Even when not, they influence multiple
+    species in stand dynamics
+    -   Disease in stand dynamic temporal scale. Can be deterministic (like
+        spread of root disease), but also stochastic (Weather driven spread)
+
+-   Importance of spatial extent of system.\
+-   Potentially a different set of goals than in managing wildlife or crop
+    systems
+-   Importance of scale for management decisions (@Joao2012)
+
+Modeling for management
+
+-   Structured models to understand the system and scenario analysis
+-   Unstructured approaches for forecasting
+-   Combination needed for real-time decision-making
+    -   Probabilistic component important
+
+-   Confronting dynamics model with data - fitting data to individual components
+    inadequate for complex system
+
 Study System - Sudden Oak Death in Redwood/Tanoak/Bay Forests
 =============================================================
 
@@ -25,7 +49,7 @@ Study System - Sudden Oak Death in Redwood/Tanoak/Bay Forests
         spread in Redwood and other species (DiLeo et al. 2009)
     -   Lethality varies by tree size (Cobb et al. 2012)
 
-General Apparoch
+General Approach
 ================
 
 -   Extend mechanistic model from Cobb et al. (2012) that incorporates disease
@@ -56,30 +80,30 @@ attributes:
 
 Each class has its own demographic and epidemiological parameters:
 
-  -----------------------------------------------------------------------
-          Parameter Symbol         Description
-  -------------------------------- --------------------------------------
-          $\boldsymbol m$          Probability of death per year.
+  ------------------------------------------------------------------------
+          Parameter Symbol          Description
+  --------------------------------- --------------------------------------
+           $\boldsymbol m$          Probability of death per year.
 
-          $\boldsymbol b$          Fecundity per individual per year.
+           $\boldsymbol b$          Fecundity per individual per year.
 
-          $\boldsymbol g$          Probability of transition to the next
-                                   size class.
+           $\boldsymbol g$          Probability of transition to the next
+                                    size class.
 
-          $\boldsymbol R'$         Probability of recovery from disease.
+          $\boldsymbol R'$          Probability of recovery from disease.
 
-          $\boldsymbol r$          Probability of resprouting after death
-                                   by disease.
+           $\boldsymbol r$          Probability of resprouting after death
+                                    by disease.
 
-          $\boldsymbol w$          Relative space taken up by an
-                                   individual tree of the class, or the
-                                   competitive coefficient.
+           $\boldsymbol w$          Relative space taken up by an
+                                    individual tree of the class, or the
+                                    competitive coefficient.
 
-        $\boldsymbol\theta$        Spore production and dispersal kernal
-                                   parameters
+         $\boldsymbol\theta$        Spore production and dispersal kernal
+                                    parameters
 
-          $\boldsymbol E$          Effect of density on $m$,$b$,and $g$.
-  -----------------------------------------------------------------------
+           $\boldsymbol E$          Effect of density on $m$,$b$,and $g$.
+  ------------------------------------------------------------------------
 
   : Class-specific demographic and epidemiological parameters
 
@@ -306,7 +330,7 @@ model to evaluate population impacts in the presence of density dependence :
 illustrated with application to delta smelt ( Hyposmesus transpacificus ).
 Canadian Journal of Fisheries and Aquatic Science 1306:1285–1306.
 
-Meentemeyer, R. K., N. J. Cunniffe, A. R. Cook, J. a. N. Filipe, R. D. Hunter,
+Meentemeyer, R. K., N. J. Cunniffe, A. R. Cook, J. A. N. Filipe, R. D. Hunter,
 D. M. Rizzo, and C. a Gilligan. 2011. Epidemiological modeling of invasion in
 heterogeneous landscapes: spread of sudden oak death in California (1990–2030).
 Ecosphere 2:1–24.

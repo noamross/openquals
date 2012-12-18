@@ -1,109 +1,143 @@
 % Qualifying Exam Reading List
 % Noam Ross
-% 12-12-13 15:08:20
+% 12-12-17 16:20:45
 
-Forest Landscape Pathology
-==========================
+My qualifying exams are on March 5, 2013. 78 days away! I'll be trying to blog
+my reading as well as the development of my proposal here and in a [github
+repository]. Today - my topics and reading list.
 
-Examiner: [David Rizzo]
+-   [Forest Landscape Pathology]
+    -   [Landscape-level disease management]
+    -   [Sudden Oak Death]
 
-Landscape-level disease management
-----------------------------------
+-   [Model Construction and Theory]
+    -   [Approaches to building and using models]
+    -   [SIR epidemiological models]
+    -   [Population structure in disease dynamics]
+    -   [Plant-specific applications]
 
--   Holdenrieder et al. (2004)
--   Meentemeyer et al. (2012)
+-   [Confronting Models with Data]
+    -   [Fitting time-series data with iterative filtering]
+    -   [Model Comparison]
+
+-   [Natural Resource Economics]
+    -   [Forest rotation models]
+    -   [Age-structured harvest models]
+    -   [Insect control]
+
+-   [References]
+
+* * * * *
+
+[Forest Landscape Pathology][1]
+===============================
+
+**Examiner: [David Rizzo]**
+
+[Landscape-level disease management][1]
+---------------------------------------
+
+Several papers on the landscape-scale approach to forest disease:
+
 -   Gilbert and Hubbell (1996)
 -   Hansen and Goheen (2000)
--   Holt et al. (2003)
+-   Holdenrieder et al. (2004)
+-   Meentemeyer et al. (2012)
 
-Case studies from Tainter and Baker (1996):
+Case studies in forest from Tainter and Baker (1996). For each of these, read
+1-2 refs to understand the relationships between tree-, stand-, and
+landscape-level processes, and how management approaches to the disease reflect
+these processes. How do the disease, ecosystem properties, and social context
+affect the efficacy of approaches such as resistance breeding, silvicultural
+treatment, eradication, spread-slowing?:
 
 -   Root system decay
 -   Needle Blight
 -   White pine blister and fusifirm rust
 -   Dwarf mistletoe
 
-Plus insects:
+Do the same for insects from our [forest outbreaks seminar]
 
 -   Gypsy Moth
 -   Bark beetles
 
-Appraoches:
+[Sudden Oak Death][1]
+---------------------
 
--   Breeding for resistance
--   Slow the spread
--   Eradication
--   Silvicultural treatments
+In addition to ecological papers by [David Rizzo] about Sudden Oak Death
+ecology, papers and reviews on the biology of the organism:
 
-Sudden Oak Death
-----------------
-
--   Biology: Grünwald et al. (2012)
--   Swiekei (*in press*)
 -   Rizzo et al. (2005)
+-   Grünwald et al. (2012)
+-   Swiecki and Bernhardt (2013)
 
-Model Construction and Theory
-=============================
+[Model Construction and Theory][1]
+==================================
 
-Examiner: [Marissa Baskett]
+**Examiner: [Marissa Baskett]**
 
-Approaches to building and using models
----------------------------------------
+[Approaches to building and using models][1]
+--------------------------------------------
 
 Philosophical underpinnings of ecological models, how to go about designing your
-model, and how to as well as
+model, and interfacing with non-modeling fields
 
 -   Levins (1966)
--   May (2004)
 -   Aber (1997)
--   Steve Pacala's MacArthur Lecture
+-   May (2004)
+-   Steve Pacala's MacArthur Lecture (2011, unpublished)
 
-SIR epidemiological models
---------------------------
+[SIR epidemiological models][1]
+-------------------------------
 
-Basic theory, the importance of $R_0$ and its interpretation and derivation in
-increasingly complex model structures
+Basic epidemiological theory, the importance of *R*~0~, and its interpretation
+and derivation in increasingly complex model structures
 
 -   Kermack and Mckendrick (1927)
 -   Kermack and McKendrick (1932)
 -   Kermack and McKendrick (1933)
 -   Anderson (1991)
 
-Importance of population structure in disease dynamics
-------------------------------------------------------
+[Population structure in disease dynamics][1]
+---------------------------------------------
 
 The role of intra- and inter-specific variation in disease transmission
 
--   Anderson and May (1985)
--   Dobson (2004)
--   Klepac et al. (2009)
--   Craft and Hawthorne (2008)
--   Metcalf et al. (2012)
--   Tuljapurkar et al. (2012)
+-   A general overview: Tuljapurkar et al. (2012)
+-   The WAIFW framework and age-structured populations
+    -   Theoretical foundation: Anderson and May (1985)
+    -   Empirical examples: Dwyer et al. (1997), Metcalf et al. (2012)
 
-Plant-specific applications:
-----------------------------
+-   Dynamics of pathogens with multiple hosts
+    -   Theoretical treatments Holt et al. (2003), Dobson (2004),
+    -   Empirical examples: Klepac et al. (2009), Craft and Hawthorne (2008)
 
-Models that inform my own. What changes in plant/forest systems compared to
-animal systems?
+-   Host spatial structure and clustering: Brown and Bolker (2004)
+    -   Other consequences of age structure on populations
+    -   Transient dynamics: Ezard2010, Caswell and Neubert (2005)
+    -   Modification of rate of spread: Bosch et al. (1990)
+    -   Applications: White et al. (2012)
 
--   Moore et al. (2011)
--   Seabloom et al. (2009)
--   Borer et al. (2007)
--   @Gilligan, C. A., and F. van den Bosch. 2008. Epidemiological models for
-    invasion and persistence of pathogens.. Annual review of phytopathology
-    46:385–418.
+For reference, see Diekman's 2000 and 2012 book on mathematical epidemiology.
 
--   Bolker et al. (2009)
--   Ferrari et al. (2006)
+[Plant-specific applications][1]
+--------------------------------
 
-Confronting Models with Data
-============================
+Models that inform my own. What is different, from a theoretical perspecticve,
+in plant/forest systems compared to animal systems?
 
-Examiner: [Andrew Latimer]
+-   Yellow dwarf virus: Borer et al. (2007), Moore et al. (2011), Seabloom et
+    al. (2009)
+-   Pollinator-borne anther smut: Ferrari et al. (2006)
+-   Other examples from Gilligan and van den Bosch (2008)
 
-Fitting time-series data with iterative filtering
--------------------------------------------------
+[Confronting Models with Data][1]
+=================================
+
+**Examiner: [Andrew Latimer]**
+
+[Fitting time-series data with iterative filtering][1]
+------------------------------------------------------
 
 How to estimate likelihood and maximum-likelihood parameters for dynamic
 ecological models, using multivariate time-series data?
@@ -113,39 +147,40 @@ ecological models, using multivariate time-series data?
 -   Ionides et al. (2006)
 -   He et al. (2010)
 
-Model Comparison
-----------------
+[Model Comparison][1]
+---------------------
 
 How do we compare and/or average models to select the best one for purposes of
 prediction and illuminating mechanisms?
 
-Natural Resource Economics
-==========================
+-   **TODO**
+
+[Natural Resource Economics][1]
+===============================
 
 Examiner: [Jim Sanchirico]
 
-Forest rotation models
-----------------------
+[Forest rotation models][1]
+---------------------------
 
 Optimal management of timber forests under rotation, with ecosystem service
 values, and under stochastic risk. How do traditional models of fire apply to
 disease?
 
--   Faustmann (1849)
--   Reed (1984)
--   Reed (1986)
--   Hartman (1976)
+-   Forest rotation: Faustmann (1849) and Reed (1986)
+-   Stochastic fire risk: Reed (1984)
+-   Ecosystem service value: Hartman (1976)
 
-Age-structured harvest models
------------------------------
+[Age-structured harvest models][1]
+----------------------------------
 
 What are the differences and relative advantages of stand- and invidual-based
 forestry models?
 
--   Tahvonen (2004)
+-   Tahvonen (2004); Tahvonen (2009); Tahvonen2011
 
-Insect control
---------------
+[Insect control][1]
+-------------------
 
 How do recent models of insect control apply to airborne diseases like SOD?
 
@@ -153,13 +188,16 @@ Gypsy Moth:
 
 -   Bogich et al. (2008)
 -   Blackwood et al. (2012)
--   @Epanchin-Niell2012
+-   Epanchin-Niell et al. (2012)
 
 Mountain Pine Beetle:
 
 -   Sims et al. (2010)
 -   Sims et al. (2011)
 -   Aadland et al. (2012)
+
+[References][1]
+===============
 
 Aadland, D., C. Sims, and D. Finnoff. 2012. Spatial Dynamics of Optimal
 Management in Bioeconomic Systems.
@@ -187,20 +225,35 @@ Bogich, T. L., A. M. Liebhold, and K. Shea. 2008. To sample or eradicate? A cost
 minimization model for monitoring and managing an invasive species. Journal of
 Applied Ecology 45:1134–1142.
 
-Bolker, B. M., M. E. Brooks, C. J. Clark, S. W. Geange, J. R. Poulsen, M. H. H.
-Stevens, and J.-S. S. White. 2009. Generalized linear mixed models: a practical
-guide for ecology and evolution.. Trends in ecology & evolution 24:127–35.
-
 Borer, E. T., P. R. Hosseini, E. W. Seabloom, and A. P. Dobson. 2007.
 Pathogen-induced reversal of native dominance in a grassland community.
 Proceedings of the National Academy of Sciences of the United States of America
 104:5473–8.
+
+Bosch, F., J. A. J. Metz, and O. Diekmann. 1990. The velocity of spatial
+population expansion. Journal of Mathematical Biology:529–565.
+
+Brown, D. H., and B. M. Bolker. 2004. The effects of disease dispersal and host
+clustering on the epidemic threshold in plants. Bulletin of mathematical biology
+66:341–71.
+
+Caswell, H., and M. G. Neubert. 2005. Reactivity and transient dynamics of
+discrete-time ecological systems. Journal of Difference Equations and
+Applications 11:295–310.
 
 Craft, M. E., and P. L. Hawthorne. 2008. Dynamics of a multihost pathogen in a
 carnivore community. Journal of Animal Ecology 77:1257–1264.
 
 Dobson, A. 2004. Population dynamics of pathogens with multiple host species..
 The American naturalist 164 Suppl :64.
+
+Dwyer, G., J. S. Elkinton, and J. P. Buonaccorsi. 1997. Host Heterogeneity in
+Susceptibility and Disease Dynamics : Tests of a Mathematical Model. The
+American Naturalist 150:685–707.
+
+Epanchin-Niell, R. S., R. G. Haight, L. Berec, J. M. Kean, and A. M. Liebhold.
+2012. Optimal surveillance and eradication of invasive species in heterogeneous
+landscapes.. Ecology letters 15:803–12.
 
 Faustmann, M. 1849. Berechmmg des Werthes, welchen Waldboden sowie nach nicht
 haubare Holzbestande fur die Weldwirtschaft besitzen. Allgemeine Font und Jagd
@@ -212,6 +265,9 @@ Naturalist 168.
 
 Gilbert, G. S., and S. P. Hubbell. 1996. Diseases and the Tropical of
 Conservation Forests. BioScience 46:98–106.
+
+Gilligan, C. A., and F. van den Bosch. 2008. Epidemiological models for invasion
+and persistence of pathogens.. Annual review of phytopathology 46:385–418.
 
 Gimenez, O., J. D. Lebreton, J. M. Gaillard, R. Choquet, and R. Pradel. 2012.
 Estimating demographic parameters using hidden process dynamic models.
@@ -300,8 +356,15 @@ mountain pine beetle epidemics. Journal of Economic Dynamics and Control
 Sims, C., D. Aadland, and D. Finnoff. 2011. Mountain-pine beetle outbreaks and
 shifting social preferences for ecosystem services.
 
+Swiecki, T. J., and E. A. Bernhardt. 2013. Managing sudden oak death in
+California: before, during, and after Phytophthora ramorum invasion. . U.S.
+Department of Agriculture; Forest Service; Pacific Southwest Research Station.
+
 Tahvonen, O. 2004. Optimal Harvesting of Forest Age Classes: A Survey of Some
 Recent Results. Mathematical Population Studies 11:205–232.
+
+Tahvonen, O. 2009. Optimal choice between even- and uneven-aged forestry.
+Natural Resource Modeling 22:289–321.
 
 Tainter, F. H., and F. A. Baker. 1996. Principles of Forest Pathology. . John
 Wiley & Sons.
@@ -309,7 +372,30 @@ Wiley & Sons.
 Tuljapurkar, S., T. Coulson, and U. K. Steiner. 2012. Structured population
 models: Introduction. Theoretical population biology 82:241–3.
 
+White, J. W., L. W. Botsford, A. Hastings, M. L. Baskett, D. M. Kaplan, and L.
+a.K Barnett. 2012. Transient responses of fished populations to marine reserve
+establishment. Conservation Letters 0.
+
+  [github repository]: http://github.com/noamross/openquals
+  [Forest Landscape Pathology]: #forest-landscape-pathology
+  [Landscape-level disease management]: #landscape-level-disease-management
+  [Sudden Oak Death]: #sudden-oak-death
+  [Model Construction and Theory]: #model-construction-and-theory
+  [Approaches to building and using models]: #approaches-to-building-and-using-models
+  [SIR epidemiological models]: #sir-epidemiological-models
+  [Population structure in disease dynamics]: #population-structure-in-disease-dynamics
+  [Plant-specific applications]: #plant-specific-applications
+  [Confronting Models with Data]: #confronting-models-with-data
+  [Fitting time-series data with iterative filtering]: #fitting-time-series-data-with-iterative-filtering
+  [Model Comparison]: #model-comparison
+  [Natural Resource Economics]: #natural-resource-economics
+  [Forest rotation models]: #forest-rotation-models
+  [Age-structured harvest models]: #age-structured-harvest-models
+  [Insect control]: #insect-control
+  [References]: #references
+  [1]: #TOC
   [David Rizzo]: http://ucanr.org/sites/rizzolab/
+  [forest outbreaks seminar]: https://docs.google.com/document/d/1S53Wo2L7wQ1TMp56U2_gG02usamiDKcGiFC_2dc80h8/edit
   [Marissa Baskett]: http://www.des.ucdavis.edu/faculty/baskett/
   [Andrew Latimer]: http://www.plantsciences.ucdavis.edu/faculty/latimer/index.htm
   [Jim Sanchirico]: http://www.des.ucdavis.edu/faculty/Sanchirico/Index.htm

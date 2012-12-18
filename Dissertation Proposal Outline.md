@@ -13,19 +13,44 @@ Overall Questions
 -   What is the most cost-effective strategy for maintaining populations of tree
     species?
 
-# Study System - Sudden Oak Death in Redwood/Tanoak/Bay Forests
- 
+Context: Landscape management of disease
+========================================
+
+-   Forest diseases and pests have the potential to cause damage
+-   Diseases in forests are multi-host. Even when not, they influence multiple
+    species in stand dynamics
+    -   Disease in stand dynamic temporal scale. Can be deterministic (like
+        spread of root disease), but also stochastic (Weather driven spread)
+
+-   Importance of spatial extent of system.\
+-   Potentially a different set of goals than in managing wildlife or crop
+    systems
+-   Importance of scale for management decisions (@Joao2012)
+
+Modeling for management
+
+-   Structured models to understand the system and scenario analysis
+-   Unstructured approaches for forecasting
+-   Combination needed for real-time decision-making
+    -   Probabilistic component important
+
+-   Confronting dynamics model with data - fitting data to individual components
+    inadequate for complex system
+
+Study System - Sudden Oak Death in Redwood/Tanoak/Bay Forests
+=============================================================
 
 -   Caused by water mold *Phytophthora ramorum* [@Rizzo2002b]
 -   Spreads via wind-blown raid and fog, as well as human vectors (short- and
     long-distance dispersal) [@Meentemeyer2011]
 -   Dynamics dependent on forest composition:
     -   Wide host range, but lethality and transmissivity vary by host
-    -   Lethal in tanak, spreads most widely from Bay Laurel, little effect or spread in Redwood and other species [@DiLeo2009]
+    -   Lethal in tanak, spreads most widely from Bay Laurel, little effect or
+        spread in Redwood and other species [@DiLeo2009]
     -   Lethality varies by tree size [@Cobb2012]
 
-General Apparoch 
-=================
+General Approach
+================
 
 -   Extend mechanistic model from @Cobb2012 that incorporates disease and stand
     dynamics.
@@ -34,15 +59,19 @@ General Apparoch
     -   Size structure in demographic and epidemiological parameters
     -   Density dependence on recruitment, growth, and mortality
     -   Shape of spore dispersal kernel
--   Compare models to determine best predictor of disease outbreak
--   Determine optimal combination of host- (harvesting) and pathogen-centric (spraying) controls over management periods, given constraints, to minimize probability of disease outbreak
 
-# Model
+-   Compare models to determine best predictor of disease outbreak
+-   Determine optimal combination of host- (harvesting) and pathogen-centric
+    (spraying) controls over management periods, given constraints, to minimize
+    probability of disease outbreak
+
+Model
+=====
 
 SIS model with a structured population, implemented in discrete time and space.
 
-Forest stand is represented as a lattice, with populations of trees in each
-grid cell. Populations in each cell are divided into classes with the following
+Forest stand is represented as a lattice, with populations of trees in each grid
+cell. Populations in each cell are divided into classes with the following
 attributes:
 
 -   Species
@@ -51,32 +80,33 @@ attributes:
 
 Each class has its own demographic and epidemiological parameters:
 
-  ----------------------------------------------------------------------
-         Parameter Symbol         Description
-  ------------------------------- --------------------------------------
-          $\boldsymbol m$         Probability of death per year.
+  -----------------------------------------------------------------------
+          Parameter Symbol         Description
+  -------------------------------- --------------------------------------
+          $\boldsymbol m$          Probability of death per year.
 
-          $\boldsymbol b$         Fecundity per individual per year.
+          $\boldsymbol b$          Fecundity per individual per year.
 
-          $\boldsymbol g$         Probability of transition to the next
-                                  size class.
+          $\boldsymbol g$          Probability of transition to the next
+                                   size class.
 
-         $\boldsymbol R'$         Probability of recovery from disease.
+          $\boldsymbol R'$         Probability of recovery from disease.
 
-          $\boldsymbol r$         Probability of resprouting after death
-                                  by disease.
+          $\boldsymbol r$          Probability of resprouting after death
+                                   by disease.
 
-          $\boldsymbol w$         Relative space taken up by an
-                                  individual tree of the class, or the
-                                  competitive coefficient.
+          $\boldsymbol w$          Relative space taken up by an
+                                   individual tree of the class, or the
+                                   competitive coefficient.
 
-        $\boldsymbol\theta$       Spore production and dispersal kernal
-                                  parameters
+        $\boldsymbol\theta$        Spore production and dispersal kernal
+                                   parameters
 
-          $\boldsymbol E$         Effect of density on $m$,$b$,and $g$.
-  ----------------------------------------------------------------------
-  Table: Class-specific demographic and epidemiological parameters
-  
+          $\boldsymbol E$          Effect of density on $m$,$b$,and $g$.
+  -----------------------------------------------------------------------
+
+  : Class-specific demographic and epidemiological parameters
+
 In different variations of the nested model, these parameters will either be
 held at zero, be held constant across classes or allowed to vary across classes.
 
@@ -157,26 +187,50 @@ Other Essential topics and papers related to model fitting
 Optimization
 ============
 
-**Goal**: Determine the optimal course of action for minimizing probability of disease outbreak over a management period, given budget constraints and and species conservation goals
+**Goal**: Determine the optimal course of action for minimizing probability of
+disease outbreak over a management period, given budget constraints and and
+species conservation goals
 
- - The best-fit model provides us with estimates of the probability over disease outbreaks in a forest stand over a management period.  This probability is contingent on both forest composition and spatial structure,  and the burden of spores from other areas, and changes over time as forest dynamics change the host population.
+-   The best-fit model provides us with estimates of the probability over
+    disease outbreaks in a forest stand over a management period. This
+    probability is contingent on both forest composition and spatial structure,
+    and the burden of spores from other areas, and changes over time as forest
+    dynamics change the host population.
 
- - Both composition and the arrival of disease can be modified by controls.  Select cutting may modify the composition and managment actions such as the cleaning of logging equipment can reduce the arrival of spores.  Pesticides can also reduce the probability of spores successfully infecting healthy trees.  All of these management actions (including logging) have costs, and are limited by budget constraints of management agencies and/or landowners
+-   Both composition and the arrival of disease can be modified by controls.
+    Select cutting may modify the composition and managment actions such as the
+    cleaning of logging equipment can reduce the arrival of spores. Pesticides
+    can also reduce the probability of spores successfully infecting healthy
+    trees. All of these management actions (including logging) have costs, and
+    are limited by budget constraints of management agencies and/or landowners
 
- - The solution to this optimal control problem will be an optimal *treatment rotation* - a schedule of harvest and spraying actions that minimize risk over the treatment period.
+-   The solution to this optimal control problem will be an optimal *treatment
+    rotation* - a schedule of harvest and spraying actions that minimize risk
+    over the treatment period.
 
- - An alternative useful formulation of the problem is to determine the minimum-cost method given constraints of desired tree population and *maximum acceptable probability of outbreak*.  An advantage of this approach is to provide managers with an method of implicit valuation of the tanoak population by illustrating the trade-off between costs and acceptable tree populations and risks.
+-   An alternative useful formulation of the problem is to determine the
+    minimum-cost method given constraints of desired tree population and
+    *maximum acceptable probability of outbreak*. An advantage of this approach
+    is to provide managers with an method of implicit valuation of the tanoak
+    population by illustrating the trade-off between costs and acceptable tree
+    populations and risks.
 
- - Examine under a variety of regulatory constraints:  limiting herbicide use for suppressing sprounts and others, harvest regulations in riparian areas, endangered species limitation on time/space of cutting.
+-   Examine under a variety of regulatory constraints: limiting herbicide use
+    for suppressing sprounts and others, harvest regulations in riparian areas,
+    endangered species limitation on time/space of cutting.
 
- - An extension of the analysis above will include the parameter uncertainty of the best-fit model, and an optimization under the scenario that parameter uncertainties decrease with time
+-   An extension of the analysis above will include the parameter uncertainty of
+    the best-fit model, and an optimization under the scenario that parameter
+    uncertainties decrease with time
 
 Topics and papers relevant to optimization
 ------------------------------------------
 
 -   Optimal rotation under stochastic risk: @Reed1984
 -   Forestry with multiple age classes: @Tahvonen2004
--   Optimal Management with risk of crossing uncertain thresholds: @Polasky2011c, @Chen2012
+-   Optimal Management with risk of crossing uncertain thresholds:
+    @Polasky2011c, @Chen2012
 -   Risk minimization over time
 
-# References
+References
+==========
