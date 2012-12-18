@@ -114,7 +114,7 @@ The role of intra- and inter-specific variation in disease transmission
 
 -   Host spatial structure and clustering: Brown and Bolker (2004)
     -   Other consequences of age structure on populations
-    -   Transient dynamics: Ezard2010, Caswell and Neubert (2005)
+    -   Transient dynamics: Ezard et al. (2010), Caswell and Neubert (2005)
     -   Modification of rate of spread: Bosch et al. (1990)
     -   Applications: White et al. (2012)
 
@@ -254,6 +254,11 @@ American Naturalist 150:685–707.
 Epanchin-Niell, R. S., R. G. Haight, L. Berec, J. M. Kean, and A. M. Liebhold.
 2012. Optimal surveillance and eradication of invasive species in heterogeneous
 landscapes.. Ecology letters 15:803–12.
+
+Ezard, T. H. G., J. M. Bullock, H. J. Dalgleish, A. Millon, F. Pelletier, A.
+Ozgul, and D. N. Koons. 2010. Matrix models for a changeable world: the
+importance of transient dynamics in population management. Journal of Applied
+Ecology 47:515–523.
 
 Faustmann, M. 1849. Berechmmg des Werthes, welchen Waldboden sowie nach nicht
 haubare Holzbestande fur die Weldwirtschaft besitzen. Allgemeine Font und Jagd

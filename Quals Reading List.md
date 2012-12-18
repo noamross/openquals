@@ -114,7 +114,7 @@ The role of intra- and inter-specific variation in disease transmission
 
 -   Host spatial structure and clustering: @Brown2004a
     -   Other consequences of age structure on populations
-    -   Transient dynamics: Ezard2010, @Caswell2005
+    -   Transient dynamics: @Ezard2010, @Caswell2005
     -   Modification of rate of spread: @Bosch1990
     -   Applications: @White2012c
 
