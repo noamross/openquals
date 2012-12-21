@@ -70,6 +70,7 @@ ecology, papers and reviews on the biology of the organism:
 -   @Rizzo2005
 -   @Grunwald2012
 -   @Swiecki2013
+-   @Ellison2010
 
 [Model Construction and Theory][1]
 ==================================
@@ -112,7 +113,7 @@ The role of intra- and inter-specific variation in disease transmission
     -   Theoretical treatments @Holt2003, @Dobson2004,
     -   Empirical examples: @Klepac2009, @Craft2008
 
--   Host spatial structure and clustering: @Brown2004a
+-   Host spatial structure and clustering: @Park2002, @Brown2004a
     -   Other consequences of age structure on populations
     -   Transient dynamics: @Ezard2010, @Caswell2005
     -   Modification of rate of spread: @Bosch1990
@@ -216,7 +217,8 @@ Mountain Pine Beetle:
   [Insect control]: #insect-control
   [References]: #references
   [1]: #TOC
-  [David Rizzo]: http://ucanr.org/sites/rizzolab/
+ 
+ 
   [forest outbreaks seminar]: https://docs.google.com/document/d/1S53Wo2L7wQ1TMp56U2_gG02usamiDKcGiFC_2dc80h8/edit
   [Marissa Baskett]: http://www.des.ucdavis.edu/faculty/baskett/
   [Andrew Latimer]: http://www.plantsciences.ucdavis.edu/faculty/latimer/index.htm
