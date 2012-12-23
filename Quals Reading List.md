@@ -142,10 +142,12 @@ in plant/forest systems compared to animal systems?
 How to estimate likelihood and maximum-likelihood parameters for dynamic
 ecological models, using multivariate time-series data?
 
+-   @Andrieu2002
 -   @Gimenez2012
 -   @Arulampalam2002
 -   @Ionides2006
 -   @He2010
+-   @Knape2012
 
 [Model Comparison][1]
 ---------------------
@@ -153,7 +155,11 @@ ecological models, using multivariate time-series data?
 How do we compare and/or average models to select the best one for purposes of
 prediction and illuminating mechanisms?
 
--   **TODO**
+-   @Friedman2001, Chapter 7
+-   @Gelfand1998
+-   @Spiegelhalter2002
+-   Accounting for uncertainty: @Cressie2009
+
 
 [Natural Resource Economics][1]
 ===============================
