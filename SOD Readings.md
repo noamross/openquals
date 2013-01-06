@@ -10,13 +10,19 @@ Some literature on Sudden Oak Death
 Summary
 -------
 
--  SOD management occurs at many scales, but the stand/landscape scale is the most complex
--  It occurs in a wide range of forests that include coast live oak and tanoak
--  It has a mostly clonal population structure, with some differences between NA and Europe
--  Bay Laurel presence, historic path of infection, and stand structure affect probability of disease
--  Dispersal is wind driven, mostly from leaves of canopy trees.  Occurs in rainy season
--  Major mortality impacts on oak and tanoak, but variation in susceptibility at individual level
--  Management span, monitoring, diagnosis, eradication, stand manipulation, fungicides, quarantine and restoration.
+-   SOD management occurs at many scales, but the stand/landscape scale is the
+    most complex
+-   It occurs in a wide range of forests that include coast live oak and tanoak
+-   It has a mostly clonal population structure, with some differences between
+    NA and Europe
+-   Bay Laurel presence, historic path of infection, and stand structure affect
+    probability of disease
+-   Dispersal is wind driven, mostly from leaves of canopy trees. Occurs in
+    rainy season
+-   Major mortality impacts on oak and tanoak, but variation in susceptibility
+    at individual level
+-   Management span, monitoring, diagnosis, eradication, stand manipulation,
+    fungicides, quarantine and restoration.
 
 Introduction
 ------------
@@ -101,27 +107,36 @@ Pathogen Characterization
 
 ### Host Resistance
 
--   Trees display variation in susceptibility at individal level at all aptial scales.
+-   Trees display variation in susceptibility at individal level at all aptial
+    scales.
 -   More population-level patterns in Bay Laurel than oak species
 
 ### Sporulation and Survival Patterns
 
--  Sporangia produced on leaves (and small twigs on Tanoak) following rainfall.  No sporulation directly from bleeding cankers.
--   Sporulation/infection restricted to rainy season in Mediterranean climates.  Temp/moisture relationships complex.  Sporulation commencement relative to start of rainy season varies across forests, perhaps due to level of dessication in dry months.  Significant inter-annual variation.
--   Propugules travel ~10-20m from infected tree, depending on height.  More infection of oaks in less-dense stands, possibly due to lower wind speed.
+-   Sporangia produced on leaves (and small twigs on Tanoak) following rainfall.
+    No sporulation directly from bleeding cankers.
+-   Sporulation/infection restricted to rainy season in Mediterranean climates.
+    Temp/moisture relationships complex. Sporulation commencement relative to
+    start of rainy season varies across forests, perhaps due to level of
+    dessication in dry months. Significant inter-annual variation.
+-   Propugules travel \~10-20m from infected tree, depending on height. More
+    infection of oaks in less-dense stands, possibly due to lower wind speed.
 -   No evidence of lateral spread in understory
 -   Dispersal is long-tailed, sugesting occaisional long-distance dispersal
 
-## Determination of Impacts
+Determination of Impacts
+------------------------
 
 -   Doubles mortality of Coast Live Oak, quadruples tanoak.
 -   Spreads very quickly within a stand
 -   Cascading ecological effects
     -   Altered competition between plant species
-    -   Syngergism with other fungal (decay) pathogens and wind-driven mortality.
+    -   Syngergism with other fungal (decay) pathogens and wind-driven
+        mortality.
     -   Increased woody debris, change in nutrient cycling
-    
-## Management Actions
+
+Management Actions
+------------------
 
 See Table 2 in paper for research finding-management actions links
 
@@ -135,13 +150,15 @@ See Table 2 in paper for research finding-management actions links
 ### Eradication
 
 -   Possible at early stages of invasion
-    - Requires intensive survey, quaratine, cut, burning stump treatment
+    -   Requires intensive survey, quaratine, cut, burning stump treatment
+
 -   Adaptive management to adjust buffer area, pre-emptive removal of hosts
 
 ### Stand manupulation
 
 -   Removal of infected plants
--   Increasing interhost distance (but lower density may lead to more wind disperal)
+-   Increasing interhost distance (but lower density may lead to more wind
+    disperal)
 -   Pruning branches may lessen load without major ecological community effects
 
 ### Fire
@@ -152,8 +169,10 @@ See Table 2 in paper for research finding-management actions links
 
 ### Fungicides
 
--   Phosphites injected, or applied to bark and leaves are effective. Soil treatments not
--   Large-scale treatment very expensive, difficult to target the patchy distribution of disease
+-   Phosphites injected, or applied to bark and leaves are effective. Soil
+    treatments not
+-   Large-scale treatment very expensive, difficult to target the patchy
+    distribution of disease
 
 ### Prevention of Human Spread
 
@@ -168,4 +187,116 @@ See Table 2 in paper for research finding-management actions links
 
 ### Conculusions
 
--  Forests with hosts may be vulnerable in British Columbia, other parts of world.  Actual risk depend on climate, species composition and forest structure
+-   Forests with hosts may be vulnerable in British Columbia, other parts of
+    world. Actual risk depend on climate, species composition and forest
+    structure
+
+@Ellis2010 - Spatial Pattern and Connectivity
+=============================================
+
+Summary
+-------
+
+SOD severity is best predicted by a combination of environmental
+(biotic/abiotic) variables and connectivity to other areas of disease.
+Connectivity is not based strictly on physical dispersal distance, but on the
+effective distance based on the difficulty of the disease moving through patches
+of different host density or presence.
+
+The effective dispersal distance calculation depends a lot on the scale of
+dispersal and the scale of examination here.
+
+*Personal note: You need a table to compare model structures and results. Text
+description is terrible*
+
+Introduction
+------------
+
+-   Three types of connectivity
+    -   *Structural* - physical aspects of landscape
+    -   *Potential* - landscape + dispersal ability
+    -   *Actual* - empirically derivd=ed
+
+-   Key question: When is connectivity important in dynamics and when can it be
+    ignored?
+    -   Can be evaluated by relative importance of environmental and
+        connectivity variables
+
+-   Study tests relative importance of connectivity in determining spatial
+    distribution of SOD
+    -   Also test whether results are sensitive to method of measurement
+
+-   *Hypothesis 1*: Potntial connectivity is important in determining spatial
+    distribution of SOD
+-   *Hypothesis 2*: Connectivity is better characterized when it includes
+    landscape structure
+-   *Hypotesis 3*: Connectivity and environmental variables equal in influence
+
+Methods
+-------
+
+-   Data from 86 Plots in Sonoma County in 2005. Randonly established in host
+    woodlands. Forest info and disease severity meaured in each. Map of land
+    cover generated from aerial imagery.
+-   Compared models of spread though simple Euclidean distance to effective
+    distance (least-cost path based on friction assigned to each land cover
+    type)
+-   Model structure was $$Y_i = \beta_0 + \sum \beta_j X_j + \beta_9 \lambda_i$$
+    Where $Y_i$ was disease incidence (sympotomatic leaves/stem), $X$ are
+    environmental variables and $\lambda$ is the spore burden based on a
+    negative-expotential dispersal kernel from all other points, via Euclidean
+    or effective distance, weighted by disease level at other sites.
+-   Environmental variables were canopy cover, precipitation, ave. daily hours
+    at optimal temp and humidity for pathogen growth, potenital irraadiation,
+    moisture index, bay laurel total DBH, total host DBH
+-   Friction was 1 for cells with hosts, tested varied scenarios for non-host
+    cells
+-   Stepwise regression: First fit dispersal kernel for each friction scenario,
+    then fit rest of model
+-   Determined best fit using 9 selection methods in SAS. Picked top models that
+    were selected consistently and compared via BIC/AIC
+-   Calculated standardized regression coeffficients
+
+Results
+-------
+
+-   Models with both connectivity and environment peformed best
+-   Models with effective distance performed better than Euclidean
+-   Best fit models had connectivity of mid-level importance among environmental
+    variables of varying importance
+-   Best fit model had mid-level friction values for non-host landscapes,
+    indicating that non-host environments sometimes did carry disease
+
+# @Grunwald2012 - Emergence of SOD
+
+## Biology
+
+ - *P. ramorum* is a water mold, most closely related to brown algae and diatoms
+ - Has both asexual and sexual phase.  Asexual spores are chlamydospres (dormant, resistant to adverse conditions), and sporangia (can germinate or go motile)
+ - Sexual reproduction rare, mating types do not often interact
+ - Sporangia splash-disperse from leaves and twigs.  Zoospores released from sporangia, then germinate and penetrate host.  Rapid life cycling under good conditions.  Many chlamydospres produced, too.
+ -  Hosts in > 100 species, 40 genera
+ -  Symptoms: necrotic foliar leisions, shhot dieback, or bleeding cankers on stem (discolored phloem and xylem, declining sap/hydraulic flow).  Both sympoms in tanoak
+
+## Repeated emergence
+
+- Three clonal lineages, EU1, NA1, NA2, with all three present in N. America and only the first in Europe.
+-  NA1 introduced in nursery plants in Scotts Valley, CA, in late 20th century, probably had human-assisted dispersal to local wld forest.  Spread through the nursery trade across the U.S.
+-  EU1 site of origin in Europe unclear, but found mostly in nurseries/gardens and in UK larch plantations.  Later introduced to Pacific Northwest, reached CA.
+-  NA2 first found in BC or Washington, unknown source.
+-  Strains are diverging and evolving, but no evidence of selection
+-  Eradication unlikely
+-  Repeated emergence due to wide host range, favorable nursery environment
+-  Clonal lines likely descended from sexual population (have high heterozygosity), that co-evolved with hosts for a long time.  Location unknown
+-  Mutations indicate that clonal lines are >100,000 yrs old.  Clonal lines are poorly compatible, probably were separate before their introduction, come from separate source populations
+
+## Genetics
+
+ - All clonal lines are of one mating type (~gender), so no sexual production.  A few of other mater type of EU1 found, but eradicated.
+ -  No natural recombinants detected, artifically induced ones have reduced pathogenicity, reduced chromosome number, and reduced growth rates.  This is consistent with *Phytophthora cinnamomi*.
+ 
+## Other *Phytophthora* species
+
+- Other *Phytophthora* species are pathogenic.  Many more species have been discovered in recent years.
+- Among pathogenic species, most are clonal lines with little diversity, suggesting introduction to new hosts is what causes disease emergence, rather than recombination
+-  However, species hybrids have been found and some have expanded host ranges.

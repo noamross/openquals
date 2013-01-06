@@ -51,7 +51,7 @@ How do the disease, ecosystem properties, and social context affect the efficacy
 of approaches such as resistance breeding, silvicultural treatment, eradication,
 spread-slowing?:
 
--   Root system decay
+-   Root system decay 
 -   Needle Blight
 -   White pine blister and fusifirm rust
 -   Dwarf mistletoe
