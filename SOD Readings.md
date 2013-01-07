@@ -269,9 +269,16 @@ Results
 
 # @Grunwald2012 - Emergence of SOD
 
+## Summary
+
+   - *P. ramorum* is a water mold that causes SOD, has a wide host range, and spreads by wind-blown rain
+   - It's population consists of three major clonal lineages, two in NA and one in Europe
+   - The lineages descended from a sexual population but sexual reproduction is effectively non-functional in them.  The origin of the populations is unknown.
+   - Emergence of the disease is driven by novel host-pathogen combinations, rather than evolution of the pathogen.  This pattern is common to *Phytophthora* species.  It is possible that *P. Ramorum* may hybridize with other species.
+
 ## Biology
 
- - *P. ramorum* is a water mold, most closely related to brown algae and diatoms
+ - *P. ramorum* is a water mold, most closely related to brown algae (e.g. kelp) and diatoms
  - Has both asexual and sexual phase.  Asexual spores are chlamydospres (dormant, resistant to adverse conditions), and sporangia (can germinate or go motile)
  - Sexual reproduction rare, mating types do not often interact
  - Sporangia splash-disperse from leaves and twigs.  Zoospores released from sporangia, then germinate and penetrate host.  Rapid life cycling under good conditions.  Many chlamydospres produced, too.
@@ -300,3 +307,65 @@ Results
 - Other *Phytophthora* species are pathogenic.  Many more species have been discovered in recent years.
 - Among pathogenic species, most are clonal lines with little diversity, suggesting introduction to new hosts is what causes disease emergence, rather than recombination
 -  However, species hybrids have been found and some have expanded host ranges.
+
+# @Swiecki2013
+
+## SOD Overview
+
+### Biology
+
+ - Trunk canker hosts of SOD are oaks (*Quercus*) species, and tanoak (*Nolithocarpus*).  White oaks have not been found infected in the field.
+ - Many more species are foliar hosts, which are not killed by SOD
+ - Foliar hosts can have any combination of high or low suceptibility and high or low sporulation.  Pacific madrone is susceptible but doesn't produce many spores.  Bay laurel is high in both.
+ - Zoospores, produced by sporangia, can swim and aggregate towards chemical released by hosts, staging mass hyphal attacks
+ - The EU1 strain is more aggressive than the NA strains
+
+### Life Cycle in Forests
+
+ - More spores form in wetter conditions
+ - On tanoak, canopy infections moves down to the stem via rainwater flowing down the stem.  Trees near California Bay are the first to develop cankers
+ - Other oaks may be infected by bay or tanoak, but are dead-end hosts
+ - On bay, forms dark leisions on  downward-hanging leaf tips and edges, with yellowish border.  Leaves turn yellow and typically drop in dry season.  Few infected leaves remain for first rains of year, but repeated rains grow population.
+ - Lower trunks of canker hosts remain wet after rain, allowing infection
+ - Spread is influenced by relative height of bay and oaks, wind direction, oak canopy size (can intercept more spores), and screening by nonsusceptible species
+ - Non-bay foliar hosts do not increase risk of disease, except possibly climbing poison oak when bay is also present.  This may be due to leaf shedding.
+ 
+### Factors influencing SOD variability
+
+- **Climate**: 12 hours of warm, wet conditions needed for sporgangga formation.  Similar conditions for infection.  Thus, infction greatest in late spring rains, shady sites, lower canopy.
+- **Hosts**: Species variability.  Cankers form on trunks >10 cm diameter, more on larger trunks (SOD infects the bark, which is thicker). No effect of tree vigor.
+-  Genetic variation, but this may be a small factor.
+- Transport mechanisms: Human, wind, watrcourses, possibly animals
+
+### Development in hosts
+ 
+ - Infects the phloem tissue, mostly on lower trunk. Can reach vasular cambium, out xylem and sometimes spread vertically.
+ - Cankes appear as brownish leisons on inner bark.  Appear similar to other *Phytophthora* sp. leisons
+ - Cankers usually bleed thick, dark fluid in 6mo-2yr after infection.  Bleeding can stop after time.
+ - Beetles and rot fungi infect late-stage hosts (~1 year after canker development.  In tanoak, secondary disease may be first visible symptom.
+ - Decline may be sudden (due to girdling by cankers), but this follows at least 6 mo of ingection.  Progressive decline may take years (8-11 in coast live oak), may die out or break due to weakness.
+ - Diagnosis is either circumstanial or requires molecular methods 
+- Stand-level develpment depends on time since disease arrival, weather, host arrangement.  In favorable conidtions most susceptible trees can be killed in a few years.
+ 
+## Managing Stands
+
+ - Most SOD-susceptible CA forests not managed for timber, provide various ecosystem services
+ - Management plan is needed in many cases.  Based on needs/wants and available resources, should include strategies/actions and monitoring/evaluation components.
+ - Plan varies between pre-, during-, and post-disease stages, which may be different over small distances.
+ - Key questions for *before*: Is *Phytophthora ramorum* present?  How far away are infections?  What are consequences/risks with introduction? 
+ - Actions for *before*: Exclusion, Bay Removal, Chemical control.  Relative usefulness depends on risk and proximity of disease
+ -  Key questions for *during*: What is incidence of SOD?   How to minimie infection, but also hazards associated with infected trees.
+ - Key questions for *after*: How long will affected trees survive?  What is their failure potential?  What fuels have accumulated and how distributed? How to increase survival, reduce hazard (incl. from fire), and restore?  What are restoration needs? What species are regenerating?
+ -  Action for *after*: Cut or leave?  Actively manage gaps for invasives, fire.
+ 
+### Prioritiation
+
+ - Prioritization especially important in large forest tracts.
+ - Which, how, and whn to treat?
+ - Base on ease of treatment, disease risk, potential resource loss, and potential hazards
+ - Formal numeric ranking is one way to combine these assessments.
+ 
+## Technical Guidelines
+
+ - Exclusion: Avoid nursery stock near forests, do not move pruned host material, clean equipment/tools (spray disinfectant not effective). Wood may be burned, but drying also adequate.
+ - Reducing disease risk: 
