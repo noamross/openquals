@@ -241,7 +241,7 @@ See Table 2 in paper for research finding-management actions links
 ### [Stand manupulation][6]
 
 -   Removal of infected plants
--   Increasing interhost distance (but lower density may lead to more wind
+-   Increasing interhost distance (but lower   may lead to more wind
     disperal)
 -   Pruning branches may lessen load without major ecological community effects
 

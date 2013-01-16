@@ -127,6 +127,23 @@ transmission will be subjec to environmental stochasticity, and recruitment,
 demographic transitions, and infection will be subject to demographic
 stochasticity.
 
+Additions
+----------
+
+Use @Klepac2010 structural framework, extended to include multiple species *and* life stages.
+
+ - Multinomial draws for transition stochasticity
+ - Poission distributions for births
+ - Environmental stochasticity - what does this most effect?
+     - Spore distribution/creation
+
+ - Observational stochasticity
+     - Binomial observation probability
+     - Ask Richard - what do we think false positive and negative rates are like?
+     
+     
+Need to meet with Alan to discuss data/model matchup?
+
 Essential topics and papers related to disease modeling
 -------------------------------------------------------
 
