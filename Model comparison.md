@@ -230,11 +230,11 @@ $$p_D = \overline{D(\theta)} - D(\bar{theta})$$
 
 Where $D$ is the "Bayesian deviance":
 
-$$D(\theta) = -2 \log (p(y| \theta)) + 2 \log (f(y))
+$$D(\theta) = -2 \log (p(y| \theta)) + 2 \log (f(y))$$
 
 That is $p_D$ is the "mean deviance minus the deviance of the means."  $f(y)$ is a standardizing function on the data, for instance, the probability of a model that exactly  reproduces the data.
 
-Note that $\overline{D(\theta)$ takes the form of deviance plus $p_D$, the measure of model complexity.
+Note that $\overline{D(\theta)}$ takes the form of deviance plus $p_D$, the measure of model complexity.
   
 By applying Bayes' theorem to $p_D$, we find that it is $(-2\times)$ the posterior estimate of how much the data improves our knowledge of the model in general, minus how much it improves a particular (maximum likelihood estimate) of the model.  
 
@@ -279,7 +279,7 @@ $$\pi(\theta^t) = 2 \sum_i \cov^t (\hat{Y}_i, Y_i)$$.  For linear models, this e
 
 The authors propose DIC, or the **deviance information criterion** as
 
-$$\text{DIC} = D(\bar\theta) + 2p_D = \bar{D(\theta) + p_D$$
+$$\text{DIC} = D(\bar\theta) + 2p_D = \bar{D(\theta)} + p_D$$
   
 DIC is likely to also be strongly corelated to cross-validation, like AIC.  Like BIC, it requires the assumption of a true model, though not in the actual model set.  It is unkown whether it can be used for model averaging.
 
