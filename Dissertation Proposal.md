@@ -80,8 +80,8 @@ Study Approach
 
 I will examine the comparative importance of these components of population structure by (1) characterizing the dynamic behavior of models that include each type of structure and their combinations and (2) identifying the model structure that best predicts data of disease spread over time in redwood-tanoak-bay forests.  Using the best-fit model, I determine optimal paths for silvicultural and stand protection treatments to minimize the risk of outbreak over time
 
-Comparative Dynamics
---------------------
+Comparative Dynamics - Models
+-----------------------------
 
 To characterize the effects of the population structure on disease dynamics, I will compare four models.  All are extensions of the epidemiological model of @Cobb2012.
 
@@ -119,8 +119,6 @@ New susceptible trees enter the system via density-dependent seedling recruitmen
 
 The model is modified from @Cobb2012 in several ways: (1) inclusion of demographic stochasticity, (2) conversion from continuous discrete time, (3) the inclusion of $\lambda_ex$, force of infection from areas outside the system, (4) the exclusion of recovery of infected trees, which has not been observed in the field. Finally, the only population structure in Model A is the difference in species parameters. It excludes age structure, and spatial structure, assuming a well-mixed population and frequency-dependent transmission (Following @Diekmann1990)
 
-The model will be parameterized with three speces: tanoak, bay, and redwood, which will represent all non-host species.  And run with initial conditions found in @Cobb2012 and @Filipe2013.
-
 **Model B** adds stage structure to Model A.  In this case, the vectors $\boldsymbol{S_t}$ and $\boldsymbol{I_t}$ represent the population divided by species and size class:
 
 $$\begin{aligned}
@@ -134,25 +132,33 @@ Here disease transitions are separated in time from demmographic transitions [@K
 
 Where $\boldsymbol{A}$ is the matrix of demographic rates specifying transitions between classes and mortality. $\boldsymbol{A}$ is a block-diagonal matrix of size transition matrices, with no transitions between species classes.
 
-**Models 3 and 4** modify Models 1 and 2 by adding spatial structure in the form of a lattice metapopulation.  $S_t$ and $I_t$ become Individuals do not migrate between sub-populations on the lattice, 
- 
+**Models 3 and 4** modify Models 1 and 2 by adding spatial structure in the form of a lattice metapopulation.  $\boldsymbol{S_t}$ and ${I_t}$ become $\boldsymbol{S_{jt}}$ and $\boldsymbol{I_{jt}}$, matrices of each class at each location.  Furthermore, the force of infection $\left((1 - e^{-\boldsymbol{\beta I_t} - \boldsymbol{\lambda_{ex}}})\boldsymbol{S_t} \right)$ is replaced with an overall force of infection $\Lambda_{jt}$ at each location:
 
--   Build series of nested models of varying complexity that incorporate
-    -   Species differences in demographic and epidemiological parameters
-    -   Size structure in demographic and epidemiological parameters
-    -   Spatial structure
+$$\Lambda_{jt} =  \boldsymbol\beta \sum_1^j \phi (\boldsymbol I_{jt}, x, \boldsymbol{\theta}) + \lambda_{ex}$$
 
--   How does inclusion of each component of structure modify
-    -   $R_0$ (global and local)
-    -   Epidemic size
-    -   Probability of outbreak
-    -   Time to extinction of tanoak and *P. ramorum*.
+$x$ is the location, $\phi$ is the dispersal kernel of *P. ramorum* from location $j$ to $x$, and $\theta$ is a vector of parameters of the dispersal kernel. $\beta$ remains the contact matrix, representing physiological and vertical dispersal components of spore dispersal. 
 
--   Compare models to determine best predictor of disease outbreak
--   Determine optimal combination of host- (harvesting) and pathogen-centric (spraying) controls over management periods, given constraints, to minimize probability of disease outbreak
+Using these four models, I will determine:
 
-Nested Models
--------------
+ - How global epidemic growth rate $R_0$, probability of global epidemic, the epidemic size, and time to extinction of both hosts and pathogens vary between the models
+ - How the presence of each form of population structure affect these values when global species densities and mean parameter values remain identical
+ - Whether the effects of population structure are additive or if they interact in a more complex way.
+
+The model will be parameterized with three species: tanoak, bay, and redwood, (the latter representing) all non-host species.  Parameters and initial conditions will be drawn from @Cobb2012 and @Filipe2013.
+
+Fitting Models to Data
+======================
+
+In order to determine which model to use for planning and management, I must select from the model structures above by determining which best represents observations from time series data.
+
+Data
+----
+
+Data to fit the models comes from a collaboration with the Rizzo lab's diease monitoring plot network. The data consist of observations tree size, condition, and disease status from the years 2002-2007. Trees were observed in 14 sites along the California coast from X (36.16°N) to Y (38.35°N), each of which contains X-X 500 m^2^, seperated by minimium distances of Z. All plots are in forests dominated by redwood, tanoak, and Bay Laurel, with negligible other SOD host species.
+
+Size, health, and disease status of all trees were measured in 2002 and 2007, as well as for a random sample of 5 trees of each species in the years 2003-2006.
+
+Each plot within a site will represent one subpopulation within the metapopulation lattice, with the matrix of metapopulations around counting as unobserved.
 
 -   Fit all possible combinations of models:
     -   Including or excluding size structure of each species (by fixing parameters across classes)
@@ -190,16 +196,9 @@ Contact rates in SOD are not driven by differential mixing of groups, but of 3D 
 Model Fitting and Selection
 ---------------------------
 
-In order to determine which model to use for planning and management, I must select from the model structures above by determining which best represents observations from time series data.
 
-Data
-----
 
-Data to fit the models comes from a collaboration with the Rizzo lab's diease monitoring plot network. The data consist of observations tree size, condition, and disease status from the years 2002-2007. Trees were observed in 14 sites along the California coast from X (36.16°N) to Y (38.35°N), each of which contains X-X 500 m^2^, seperated by minimium distances of Z. All plots are in forests dominated by redwood, tanoak, and Bay Laurel, with negligible other SOD host species.
 
-Size, health, and disease status of all trees were measured in 2002 and 2007, as well as for a random sample of 5 trees of each species in the years 2003-2006.
-
-Each plot within a site will represent one subpopulation within the metapopulation lattice, with the matrix of metapopulations around counting as unobserved.
 
 Model fitting
 -------------
