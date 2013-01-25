@@ -354,9 +354,9 @@ WAIFW Matrix configuration and short-term disease dynamics
 
 -   Realistic matrix structures can accentuate oscillatory paterns.
 
-\# @Metcalf2011 - Inference with Structured Disease Models
+# @Metcalf2011 - Inference with Structured Disease Models
 
-\#\# Introduction
+## Introduction
 
 -   It's tough to fit structured models to data due to coarseness of
     scale-incompatibility of data
