@@ -53,7 +53,7 @@ spread-slowing?:
 
 -   Root system decay 
 -   Needle Blight
--   White pine blister and fusifirm rust
+-     blister and fusifirm rust
 -   Dwarf mistletoe
 
 Do the same for insects from our [forest outbreaks seminar]

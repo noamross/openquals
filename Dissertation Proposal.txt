@@ -48,24 +48,25 @@ components of population structure *interacting* are not well-characterized.
 
 Understanding modeled dynamics of disease in structured populations may provide
 insights useful for management. However, the ability to use such models for
-management planning requires confidence in their predictive power, particularly
-under novel management treatments. Recent developments in *particle filter*
-techniques allow estimation of the likelihoods of complex dynamic models
+management planning depends requires confidence in their predictive power,
+particularly under novel management treatments. Recent developments in *particle
+filter* techniques allow estimation of the likelihoods of complex dynamic models
 [@Arulampalam2002; @Ionides2006; @Knape2012], and subsequent comparison of
-models in out-of-sample predictive performance [@Vehtari2012]. We can have more
-confidence in the predictive power of the dynamics of such models than dynamic
-models where parameters are derived from data, but the emergent dynamic
-properties are not tested.
+models in out-of-sample predictive performance [@Vehtari2012]. Fitting dynamic
+models direclty provides more confidence in the dynamic results than deriving
+madel parameters individually from data, because allows tests confidence in
+models' emergent dynamics rather than separate components.
 
 Sudden oak death (SOD) is an emerging forest disease in California and Oregon
 that threatens populations of tanoak (*Notholithocarpus densiflorus*)
 [@Rizzo2003], has the potential to modify community structure [@Metz2012], and
 cause significant economic damage [@Kovacs2011]. Silvicultural, chemical, and
 other control techniques can modify the progression of disease [@Swiecki2013],
-but eradication of SOD is unlikely [@Cobb2013] even at local scales. Short- and
-long-term solutions for for disease control will require continuous treatment
-and monitoring regimes. Under budget constraints, planning for such treatment
-can be informed by dynamics models via optimal control techniques.
+but eradication of SOD is unlikely [@Cobb2013] even at local scales. Long and
+short- and long-term solutions to limit the damage of disease will require
+continuous treatment and monitoring regimes. Under budget constraints, planning
+for such treatment can be informed by dynamics models via optimal control
+techniques.
 
 I aim to answer the following overall questions:
 
@@ -90,26 +91,23 @@ California in the mid-1990s, SOD is caused by the water mold *Phytophthora
 ramorum* [@Rizzo2002]. *P. ramorum* often kills tanoak (*Notholithocarpus
 densiflorus*), which provide habitat and food to many vertebrate species, and
 are the primary host of ectomycorrhizal fungi in redwood forests [@Rizzo2003].
-Loss of this species may have cascading effects on other species. Tanoak also
-has important cultural value to Native American tribes in California
-[@Bowcutt2011]. The disease has also caused significant economic damage through
-removal costs and property value reduction [@Kovacs2011]. It has the potential
-to spread to species in other regions, such as northern red oak (*Quercus
-rubra*), one of the most important eastern timber species [@Rizzo2002].
+Loss of this species may have cascading effects on other species. The disease
+has also caused significant economic damage through removal costs and property
+value reduction [@Kovacs2011]. It has the potential to spread to species in
+other regions, such as northern red oak (*Quercus rubra*), one of the most
+important eastern timber species [@Rizzo2002].
 
 Population Structure: Multiple Host Species
 -------------------------------------------
 
-*Phytophthora ramorum* infects over 100 species. Host species fall into three
-types: passive hosts, foliar hosts, and passive hosts [@Swiecki2013]. Most
-species are passive hosts. *P. ramorum* may infect passive hosts, but does not
-cause ill effects or produce spores in these plants. In foliar hosts, *P.
-ramorum* resides in and produces spores from the leaves and twigs. These spores
-can then spread to other plants. The amount of spore produced varies greatly
-from species to species. In canker hosts, *P. ramorum* infects the trunk,
-producing lesions (cankers) and damaging the cambium. Few spores are produced
-from the trunk, so these are "dead end" hosts. However, infection may be lethal
-to canker hosts. In California, all canker hosts are oak species (*Fagaceae*).
+*Phytophthora ramorum* has over 100 host species in 40 genera, which fall into
+several functional types [@Swiecki2013]. In canker hosts, which are all members
+of *Fagaceae* in California, pathogen produces cankers on the trunk. Few if any
+spores are produced from the cankers, and these hosts are generally dead ends.
+SOD is fatal to many canker costs. In foliar hosts, *P. ramorum* resides and
+reproduces in leaves and twigs. Foliar hosts vary greatly in susceptibility to
+disease and spore production from diseased individuals. Some hosts are dead
+ends; others are major drivers of disease spread and survival.
 
 In Redwood forests in Northern California, the hosts of importance are tanoak
 and bay laurel (*Umbellularia californica*). Tanoak has the dubious distinction
@@ -123,42 +121,37 @@ redwood-tanoak-bay complex, bay Laurel acts as the primary disease reservoir
 [@Cobb2012], and removal of bay is a commonly suggested treatment to reduce risk
 of SOD outbreaks [@Filipe2013; @Swiecki2013].
 
-The interaction of multiple host species has important consequences for disease
-dynamics. @Dobson2004 examined a model of disease in multiple host species based
-on the SIR [@Kermack1927] framework. In Dobson's model, species had density
-dependence but interacted only though disease transmission. Importantly,
-transmission between species was always equal or less than transmission between
-species. Dobson found that when transmission was density-dependent, species had
-a complementary effect on the disease's rate of reproduction $(R_0)$; that is, a
-mix of both species led to faster outbreaks. However, in the frequency-dependent
-case[^1] $R_0$ was greatest when one species dominated. Transmission between
-species dampens and synchronizes disease oscillations in each species, and at
-very high contact rates between species the most susceptible species are more
-like to go extinct. @Craft2008 implemented a stochastic version of the
-@Dobson2004 model in a system of mamallian carnivores, finding that species with
-low intra-species contact rates acted as sinks for disease, and their contact
-with more social species increased spread of the disease within these
-low-contact species.
+@Dobson2004 examined a model of disease in multiple host species based on an the
+SIR [@Kermack1927] framework. In it, species had density dependence but
+interacted only though disease transmission. Importantly, transmission between
+species was always equal or less than transmission between species. Dobson found
+that in when transmission was density-dependent, species had a complementary
+effect on the disease's rate of reproduction $(R_0)$; that is, a mix of both
+species led to faster outbreaks. However, in the frequency-dependent case, $R_0$
+was greatest when one species dominated. Transmission between species dampens
+and synchronizes disease oscillations in each species, and at very high contact
+rates between species the most susceptible species are more like to go extinct.
+@Craft2008 implemented a stochastic version of this model in a system of
+mamallian carnivores, finding that species with low intra-species contact rates
+acted as sinks for disease, and their contact with more social species increased
+spread disease within these low-contact species.
 
-As in the models above, bay laurel and tanoak compete via disease transmission [@Cobb2010], and this results in modification of the forest community [@Metz2012].  However,  SOD dynamics differ from these systems in a few important ways. First, the
+SOD dynamics differ from these systems in a few important ways. First, the
 contact structure among species may not be symmetrical. Contact rates among
 trees are driven by differences in species transmissivity (amount of spore
-produced) and susceptibility (probability of infection per spore) rather than
-social grouping. Where one species with high transmissivity coexists with a
-species of high susceptibility, the probability of transmission may be higher
-between species than within. Also, the spatial structure of species, and the
-dispersal pattern of spores, may result in a hybrid between density and
-frequency-dependent disease transmission. While greater populations of infected
-trees increase the local spore burden, the effective number of trees any
-individual interacts with is limited by tree spacing and spore dispersal
-distance.
+produced) and susceptibility (probability of infection per spore) than social
+grouping. Where one species with high transmissivity coexists with a species of
+high susceptibility, the probability of transmission may be higher between
+species than within. Also, the spatial structure of species, and the dispersal
+pattern of spores, may result in a hybrid between density and
+frequency-dependent disease transmissions.
 
 Population Structure: Size/Stage Classes
 ----------------------------------------
 
 Within the tanoak population, epidemiological characteristics vary with tree
 size. Trees of larger size classes are more likely to be infected and die more
-quickly than smaller trees [@Cobb2012], Possibly due to the vulnerability of
+quickly than smaller tree [@Cobb2012], Possibly due to the vulnerability of
 cracked bark and the amount of bark tissue available for invasion
 [@Swiecki2005]. There is no evidence currently for variation in spore production
 or other physiological effects across tree sizes [@Davidson2008].
@@ -168,14 +161,14 @@ size classes similarly to different species, and examine the progression of
 disease in a constant population structure. However, when disease progression
 and growth occur at similar rates, these processes can interact to produce
 complex dynamics [@Klepac2010]. This is the case with SOD; infectious periods
-can last many years, during which trees may continue to grow and produce offspring.  In addition, the disease has direct effects on reproduction, as trees killed by the disease are likely to resprout [@Cobb2010; @Ramage2011]
+can last many years, during which trees may continue to grow.
 
 The effects of age-based population structure and contact rates have been
 studied extensively in the context of human disease and vaccination programs
 [@Anderson1985; @Metcalf2011]. Reducing in-class transmission rates at young
 ages increases the average age of infection, independent of the exact contact
 structure. When only the susceptibility, and not transmissivity, of each age
-class varies, @Klepac2010 found that increases in within-class transmission
+class varies. @Klepac2010 found that increases in within-class transmission
 increases both the infected and recovered population of those classes, and
 classes with high transissivity have higher equilibrium populations relative to
 low-transmissivity classes.
@@ -197,7 +190,8 @@ Despite the ability to spread long distance, strong meter-scale gradients mean
 that individual trees in stands can not be considered "well mixed" in terms of
 contact rates between trees. Rather, contact patterns across space arise from
 the interaction of spatial clustering of trees and the dispersal kernel of the
-disease. Neither frequency- nor density-dependent transmission characterizes this interaction.
+disease. Neither frequency- nor density-dependent transmission characterizes
+this arrangement.
 
 The effect of such spatial structure on development of epidemics has been
 studied with continuous populations in space [@Bolker1999], metapopulation
@@ -217,8 +211,8 @@ individuals. $\bar{\mathcal{C}}$ evolves over time but reaches a minimum that
 represents the threshold required for a global epidemic [@Brown2004a]. Also,
 both clustering and anti-clustering (oversdispersal) reduce the rate of increase
 of disease, except when clustering occurs at the scale of dispersal, in which
-case it can accellerate spread. Fat-tailed dispersal kernels,
-such as those that arise through a mixture of splash- and human-mediated transport, accellerate spread as well.
+case it can accellerate spread. Fat-tailed dispersal kernels accellerate spread,
+as well.
 
 Study Approach
 ==============
@@ -257,12 +251,11 @@ Here $\boldsymbol{S}_t$ and $\boldsymbol{I}_t$ are vectors of the populations of
 susceptible and infected individuals of each species, and $\boldsymbol{\beta}$
 is the matrix of contact rates. Other parameters are listed below in Table 1.
 
-  ---------------------------------------------------------------------
+  ----------------------------------------------------------------------
       Parameter Vector Symbol      Description
-  -------------------------------- ------------------------------------
+  -------------------------------- -------------------------------------
        $\boldsymbol m_{S,I}$       Probability of death per year, for
-                                   both susceptible and infectious
-                                   trees
+                                   both susceptible and infectious trees
 
           $\boldsymbol b$          Fecundity per individual per year.
 
@@ -274,9 +267,8 @@ is the matrix of contact rates. Other parameters are listed below in Table 1.
                                    recruitment)
 
      $\boldsymbol \lambda_{ex}$    Rate of contact of each species with
-                                   pathogen spores from outside the
-                                   site
-  ---------------------------------------------------------------------
+                                   pathogen spores from outside the site
+  ----------------------------------------------------------------------
 
   : Model A Parameters
 
@@ -343,8 +335,8 @@ The model will be parameterized with three species: tanoak, bay, and redwood,
 (the latter representing all non-host species). Parameters and initial
 conditions will be drawn from @Cobb2012 and @Filipe2013.
 
-Selecting the Model that Best Represents Observed Behavior
-----------------------------------------------------------
+Selecting the Model that Best Repesents Observed Behavior
+---------------------------------------------------------
 
 > **3. What aspects of population structure are most important in *predicting*
 > the probability and size of SOD outbreaks?**
@@ -450,7 +442,7 @@ disease distributions for other sub-populations will be randomly generated from
 other points on the lattice using the proportions from the measured plots.
 Epidemiological parameters will remain constant across sites except for the
 external force of disease $\lambda_{ex}$, which will be represented as a
-normally distributed random variable to account for site effects. varies.
+noramlly distributed random variable to account for site effects. varies.
 
 ### Model selection
 
@@ -541,6 +533,3 @@ $$\min \sum_{t=1}^T p_{(N_t < N_{\min})} \text{ s.t. } c_1(E_1) + c_2(E_2) \leq 
 
 References
 ==========
-
-[^1]: That is, when the probability of new infections depends on the
-    *proportion* of hosts infected, rather than the *density* of infected hosts.
