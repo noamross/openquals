@@ -174,7 +174,7 @@ values, and under stochastic risk. How do traditional models of fire apply to
 disease?
 
 -   Forest rotation: @Faustmann1849 and @Reed1986
--   Stochastic fire risk: @Reed1984
+-   Stochastic fire risk: @Reed1984 
 -   Ecosystem service value: @Hartman1976
 
 [Age-structured harvest models][1]

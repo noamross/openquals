@@ -220,6 +220,44 @@ of disease, except when clustering occurs at the scale of dispersal, in which
 case it can accellerate spread. Fat-tailed dispersal kernels,
 such as those that arise through a mixture of splash- and human-mediated transport, accellerate spread as well.
 
+## Optimal Control of Forest Disease
+
+15 years into the SOD epidemic, effective contol techniques remain elusive.  Chemical controls can prevent infection but are cost-prohibitive for all but small numbers of high-value ornamental trees.  While intense monitoring and eradication efforts are underway at the edge of the disease distribution in Oregon, it will invade large areas of Northern California and Oregon in the coming decades [@Meentemeyer2011].  Managing forests in the face of the disease will require trade-offs between the forest composition that maximize ecosystem service delivery and composition resilient to the disease.  
+
+Most optimal control research on forest disease and pest management has focused on detection, eradication, and slowing of the spread of disease.  @Sharov1998 examined optimal control where a manager could control the rate of spread of the invasion front, with costs  proportional to the length of the invasion front decreasing in the population.  Damages were proportional to the area invaded $\times$ time.  @Sharov1998 found that control strategies had two distinct local maxima, corresponding to eradication and slow-the-spread strategies, and the preferred strategy depended on how large an area was already invaded.  @Carrasco2010 extend this approach to spread with stratified dispersal, and examine the robustness of results to large parameter uncertainy.  @Blackwood2012
+
+@Rowthorn2009 uses an SIS model to examine the best strategies for treating metapopulations, with the goal of minimizing the integral of infected individuals under a budget constraint.  They conclude that treating the less-infected populations results in a better result, and that only funds leftover should be applied to the more infected population.  In this study, the budget applied to each period.
+
+@Forster2007 find that  a mean-field approximation is an adequate approximation of a lattice model when the site is the infected unit.  In both long- and short-term cases, a "bang-bang" approach of maximum treatment, then falling to a lower lever for a second period, applied.
+
+
+Optimal *detection* of disease has been a common area of investigation.  Several studies seek to optimize the detection regime, assuming that pre-detection damages, and post-detection treatment increase with time to detection.  @Mehta2007 find that damage costs, uncertainty in both species and detection parameters increase optimal search effort.   Generally, in these models, the most critical parameter is that of detectability, or search efficacy.
+
+Several models reconcile the costs of detection with control.  Both @Haight2010 @Horie2013 examine the role of uncertainty in this relationship, the latter in an explicit spatial context.  @Hgiht finds that treatment and monitoring are opposite strategies - it's never optimal to do both when uncertainty is large.  @Horie2013, examining the case of Oak Wilt in Minnesota, find that surveying and treating sites with high proportions, and therefore easy to detect, diseased individuals, is the best strategy for limiting new infections.
+
+@Homas2011 examines a case where new cases will eventually be overtaken by a disease front (very similar to the edge of SOD), and finds that monitoring effort optimal the further away the new site from disease, and that eradication has greater value further away.
+
+All the above optimization models use "pathogen-centric" [@Cobb2013] utility functions - minimizing infected hosts or invaded area.  When goals are minimization or eradication of disease, these make sense.  However, they are of less use in areas where disease is endemic already.  In such cases, "host-centric" goals, based on the ecosystem services provided by host species, make more sense.
+
+Host-centric goals can add complexity to the model, as they require explict modeling of pathogen effects on host and feedbacks.  There are fewer such studies.
+
+@Fenichel2010 use an $SI$ model where the goal is not merely disease control, but the maximization of the benefits of harvest of a wild population.  They model a wildlife disease that reduces the value of harvest, and also imposes a cost through transmission to livestock populations.  Rather than minimize the disease, they define the objective as minimizing costs, including control costs, when the disease is endemic.  @Fenichel2010 argue that optimal control techniques are superior to $R_0$-based management approaches, because $R_0$ is a static condition of a disease-free population, and the transient dynamics of an invaded population are different.  They find that eradication of the disease is not optimal if the disease-free population has $R_0 < 1$, as the loss of harvest revenues would be too great.
+
+@Gaff2007 looks at optimal management of a plant disease, this time in an agricultural context.  Using an integrodifference SI model, she examines disease spreading through spatially connected fields, where the control method is to harvest plants early that would otherwise become worthless if infected.  As in other cases, they find a binary control strategy optimal, harvesting all plants in infected and a surrounding buffer zone early in the season, in order to obtain maximum harvest of the remaining sites at the end of the season.
+
+@Sims2010 examines optimal control of mountain pine beetles.  As in the previous cases, the only method of control is reduction of the host (lodgepole pine) population.  @Sims explicitly include timber harvest, dead tree salvage, and forest ecosystem services in their utility function.  In this and subsequent (@Sims2011; @Aadland2012) papers, the model is used to compare the differences in control by local managers to centralized management.
+
+@Mbah2010 examined SOD in a system with bay laurel and coast live oak, which is a dead-end host, and the trade-off between detection and eradication costs.  @Mbah only removed infected (and detected) trees.  Under a budget constraint, they found it was optimal to remove all detected infected trees as soon as detected.  Under a constact detection effort regime, they 
+
+ eradication policy or a policy following @Sharov1998 follows detection.  
+ - Optimal detection and eradication
+ - Optimal control of spread
+ - Detection/control trade-offs
+ - The above are pathogen-centric
+    - Host-centric models model dynamics of coupled systems
+    - Optimize for services, rather than eradication
+  - 
+
 Study Approach
 ==============
 
@@ -242,7 +280,7 @@ Determining the Consequences of Population Structure via Comparative Dynamics
 
 To characterize the effects of the population structure on disease dynamics, I
 will compare four models. All are extensions of the epidemiological model of
-@Cobb2012.
+@Cobb2012.  These models describe disease and population dynamics of infected stands at the scale of tens to hundreds of meters.  This is the relevant scale of management for many property owners, and of management units such as high-value cultural sites.  At this scale, long-distance dispersal is primarily important only as a source of innoculum from the outside, but the meter-scale of short-distance scale of dispersal causes spatial clustering and indicates a role of stand spatial structure in dynamics [@Kelly2002].
 
 **Model A** is the simplest of the four models, only representing structure in
 the form of differences between species of trees. It is described by this system
@@ -315,7 +353,7 @@ Disease transitions are separated in time from demmographic transitions
 winter rainy season while most tree growth occurs in the spring and fall.
 
 **Models 3 and 4** modify Models 1 and 2 by adding spatial structure in the form
-of a lattice metapopulation. $\boldsymbol{S_t}$ and $\boldsymbol{I_t}$ become
+of a 20 $\times$ 20 lattice metapopulation. In this lattice, each subpopulation corresponds to a sample plot within a site in the disease census data (see "Data" below).  $\boldsymbol{S_t}$ and $\boldsymbol{I_t}$ become
 $\boldsymbol{S_{jt}}$ and $\boldsymbol{I_{jt}}$, matrices of each species and
 class at each location. Furthermore, the force of infection
 $\left((1 - e^{-\boldsymbol{\beta I_t} - \boldsymbol{\lambda_{ex}}})\boldsymbol{S_t} \right)$
@@ -353,7 +391,7 @@ To apply the understanding developed in exploring model structure to management,
 I must determine which model best represents observed dynamics of SOD in
 forests. I will fit the four models above to data of SOD spread in
 redwood-tanoak-bay forests in California and compare their ability to predict
-disease development
+disease development.
 
 ### Data
 
@@ -370,7 +408,7 @@ Size, health, and disease status of all trees were measured in 2002 and 2007, as
 well as for a random sample of 5 previously infected and 5 previously uninfected
 trees of each species per plot in the years 2003-2006.
 
-Since the time scale of the are not suffiently long to data to determine
+Since the time scale of the are not suffiently long to determine
 transition between size classes, the parameters of transition matrices will be
 drawn from other data from other sites and included as strong priors on these
 parameters.
@@ -378,7 +416,7 @@ parameters.
 ### The Observation Model
 
 The process generating the data above may be considered **hidden Markov
-process** [@Gimenez2012], that is, processes where the state of the system is
+process** [@Gimenez2012]. These are processes where the state of the system is
 dependent on its previous state, but where states are partially or imperfectly
 observed. Imperfect observation in this case is due to incomplete counting of
 trees and error in determination of tree disease status. Tree disease is
@@ -426,11 +464,11 @@ model $(p(X_t|Y_t))$. For each time step, the particles are re-sampled according
 to their individual likelihoods, in order to prevent *particle degeneracy* -
 most particles approaching zero likelihood. The product of all steps' averaged
 particle likelihoods is an unbiased estimate of the model
-likeihood.[@Arulampalam2002]
+likeihood [@Arulampalam2002].
 
 With an estimate of likelihood available, one needs an approach to determine the
 maximum-likelihood estimate of the model parameters $(\theta)$. Several methods
-are available. **Iterated filtering** (IF) estimates $\theta$ by replacing
+are available. **Iterated filtering** (ITF) estimates $\theta$ by replacing
 constant parameter values with a random walk $\theta_t$ of decreasing variance
 over time, and determining the "states" of this walk as the variance approaches
 zero. IF is computationally efficient but requires long time series.
@@ -440,7 +478,7 @@ Markov Chain sampler (e.g., Metropolis-Hastings), calculating the likelihood at
 each iteration using a particle filter. While computationally expensive, it does
 not require long time series and may be used with multiple time series. PFMCMC
 also integrates particle filtering into a Bayesian context, allowing the use of
-informative priors. I will used PFMCMC to determine maximum-likelihood
+informative priors I will used PFMCMC to determine maximum-likelihood
 parameterizations for all four models.
 
 When fitting models 1 and 2 to the data, populations from each plot in each site
@@ -450,21 +488,21 @@ disease distributions for other sub-populations will be randomly generated from
 other points on the lattice using the proportions from the measured plots.
 Epidemiological parameters will remain constant across sites except for the
 external force of disease $\lambda_{ex}$, which will be represented as a
-normally distributed random variable to account for site effects. varies.
+normally distributed random variable to account for site effects
 
 ### Model selection
 
 Model selection criteria have multiple purposes: to determine which model best
 represents "true" processes, and to estimate the utility of models for the
 purposes of prediction. In this case, I am interested in both - determining
-which components population structure matter, and also providing an estimate of
+which components of population structure matter, and also providing an estimate of
 predictive stength of the best model. For these purposes, I will use the
 **deviance information criterion** [@Spiegelhalter2002, DIC]. DIC has several
 advantages. Since it estimates the model complexity, or effective number of
 parameters, directly from the likelohood distribution, it makes it easy to
 incorporate random parameters such as $\lambda_{ex}$ that have non-integer
 contributions to model complexity. Secondly, it estimates the how priors on
-parameter values effect their contribution to model complexity.
+parameter values affect their contribution to model complexity.
 
 DIC is not suitable for model-averaging. However, model-averaged results will
 not likely be useful for the optimization analysis below. Using the best-DIC

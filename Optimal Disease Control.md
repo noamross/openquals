@@ -278,7 +278,7 @@ Sensitivity analysis:
  - Same if the damage caused by the pest is greater
  - Reverse if control cost is greater or detection cost is greater, or discount rate is greater, or if the pest is hard to detect.
  
- # @Gaff2007
+# @Gaff2007
 
  Optimal control of an integrodifference SI model
 
@@ -303,4 +303,127 @@ Sensitivity analysis:
 
  - In case of no disease, harvest at all locations at last date of season
  - With disease, harvest at maximum rate over areas ~3X dispersal range from the initial infection, from the start, then stop harvest in those areas when innoculum sources are mostly gone.  Harvest from these areas is reduced but harvest in other areas is saved.
+ 
+ 
+# @Sims2010
+
+ ## Intro
+
+ Mountain pine beete (MBP) damages are increasing.  For outbreak, they require favorable weather (favorable winter warmth plus drought reduce tree defense) plus abundance of susceptible trees (homogenous forest).
+
+ Local-scale decision making on harvest is a problem when outbreak is a global-level process.
+
+ Conclusions: Central optimal control is better than local control.
+
+ ## Related literature
+
+ Previous literature [@Reed1987] used only exogenous risk of MPB, much like teh @Reed1984 fire model.  Previous work with predator-prey models are on optimal harvesting of predator and prey and their market value.
+
+ ## Model
+
+ Optimize utility, which can come from either timber (both live and dead salvage), and ecosystem services.  Utility also comes from some other composite good.  Labor towards each of these is limited and must add up to 1 at all times (annually).  The composite good is proportional to labor input.
+
+ Harvest of both live and salvage wood costs labor proportional to the stock level.
+
+ Forest dynamics are based on lodgepole pine (*Pinus contorta*).   Size calsses are seed, young, and adult.  Only adult trees are harvested, or susceptible to natural or MPB death.
+
+ Probability of adult MPB death is a Type III function of MPB population, with parameter for health of tree.
+
+ MPB density is a power function of the previous year's successfully attacked trees.
+
+ Salvage timber stock declines according to a constant decay function and harvest.
+
+ With local management, a manager makes harvest decisions as if they have no measurable impact on the overall MPB population.   
+
+ Under central management, manager takes into account the effect on MPB risk.  
+
+ Passive management has no harvest.
+
+ ## Results
+
+ At equilibrium, passive managment has lower welfare and higher MPB populations than the other approaches.  Localized management is worse in similar way.  When optimal, additional effort goes into harvest but with much greater returns.
+
+ In dynamics, managment smoothes the variability in income in response to an outbreak.  In passive management, there are large swings in salvage harvest as salvage becomes available.  These are dampened in local management scenarios as harvest of adults weakens the pest population link.  The cycles go away with greater harvest due to MPB suppression.
+
+ Note that salvage trees are rarley harvested due to their low value and no contribution to suppressing MPB.
+
+ ### Sensitivity analysis
+
+ When non-timber or salvage benefits benefits increase, adult harvest decreases, creating more severe MPB outbreaks, and and household welfare is reduced from centralized management.   Thus, envouraging salvage logging could make things worse by directing effort away from MPB suppression-logging
+
+ ### Subsidies to fix the externality
+
+ To retain local control while increasing efficiency, a time-dependent subsidy can be used to encourage greater harvesting to suppress MPB at times.
+
+
+ # @Sims2011
+
+ MPB outbreaks have increased in severity.  Some believe this is due to climate change, but it may be due to more host trees being left in the forest, as social preferences have moved away from timber to other services.
+
+ The authors use a model of USFS management and MPB thremal response to test this.
+
+ ## Model
+
+ Model is the same as @Sims2010, with following additions:
+
+ A parameter for increased beetle growth rates and reduced tree resistance is driven by a derivative of climate, as measured by how often phloem temperatures exceed a key value.
+
+ A single parameter represents the balance in preferences between timber and non-timber services, arbitrarily chaging at 1990.
+
+ Salvage logging is ignored
+
+ In the end, harvesting proceeds until the net benefits of harvesting a tree are equal to the benefits of harvesting it in the future and its contribution to future trees.
+
+ Parameters set to achieve realistic steady state, using USFS data.
+
+ Model is run starting at steady state.
+
+ ## Fitting
+
+ Implied preference parameter for timber v. non-timber services is measured by fitting the model to data.   Data was on harvest levels and measured phloem temps.
+
+
+ ## Results.
+
+ Increase in preference for non-timber services, as well as increaseing MPB stock, mortality, and number of susceptible trees.  But harvest changes are not enought ot explain this.  Climate component needed.  Much more variation explained when climate is included.
+
+
+ # @Sims2012
+
+ Look at some of the references in this.
+
+ To address a coplex spatiotemporal problem, create a linear optimal control rule and then apply it over nonlear system across time.
+
+ Challenge with pest management when sprad is density-dependent is that control results in spatial spread.
+
+ ## Model Framework
+
+  - Spatial grid
+  - Biological state variables, subset of which disperses
+  - Dispersal weight is function of state variables, and add up to 1
+  - State variables yield ecosystem service, utility is a funtion of harvest plus ecosystem service
+  - A state variable changes via reproduction, dispersal, depreciation, and dispersal
+
+ To simplify, assume that local planner only accounts for how harvesting choice affects future utility through migration to neighbor an back.  Ignores multi-cell migration.  But still considers these as exogenous effects.
+
+ To solve, linearize the system around a steady state.  If it is stable at equilibrium, then can develop a rule in the linear case.  Apply recursively, alternating between biological system equations and rule at each period.  This works with multiple actors, because the linear rule for all actors is known.
+
+
+ ## Model of MPB
+
+  - MPB spreads to patches with greater tree densities.
+  - In a 6x6 grid, each patch has a different managers.
+  - Model is as in @Sims2010, except:
+
+ Spatial dynamics: 
+
+   - A portion of new beetles spread to adjacent cells and is function of relative density.  Edge of grid is reflecting.  Fraction remaining in cell is density of adult trees, rest are evenly dispersed among neighbors.
+
+
+  ## Results
+
+  Centralized forest planners and local ones have similar utility *at equilibrium* because the externalities of pushing migration off forest by harvest and the reverse largely cancel each other out.
+
+ Spatial heterogenetity develops with differences between edge, corner, and interior cells.
+
 
