@@ -1,7 +1,6 @@
 POMDP Papers from Alan,
 
 @Chades2008 use POMDP to determine wheter to continue to manage habitat and survey for species that are difficult to observe but may be extinct. The more threatened the species, the more time spent managing relative to surveying
-====================================================================================================================================================================================================================================
 
 POMDP algorithm finds an optimal allocation in each year given current beliefs.
 
